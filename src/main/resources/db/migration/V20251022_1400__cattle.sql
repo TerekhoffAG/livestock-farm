@@ -4,8 +4,8 @@
 
 create table lf_cattle (
   id uuid not null,
-  unsm_fed varchar(11)
-  unsm_dgl varchar(15)
+  unsm_fed varchar(11),
+  unsm_dgl varchar(15),
   nickname varchar(255),
   birth_date date,
   leaving_date date,

@@ -12,7 +12,7 @@
 	<artifactId>livestock-farm</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>livestock-farm</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Онлайн-сервис живодноводческой фермы</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -41,6 +41,11 @@
 		<dependency>
 			<groupId>org.liquibase</groupId>
 			<artifactId>liquibase-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.8.13</version>
 		</dependency>
 
 		<dependency>
