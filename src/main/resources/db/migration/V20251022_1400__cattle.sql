@@ -10,6 +10,7 @@ create table lf_cattle (
   birth_date date,
   leaving_date date,
   breed varchar(255),
+  gender varchar(255),
   state varchar(255),
   breed_purpose varchar(255),
   primary key (id)
@@ -21,5 +22,6 @@ comment on column lf_cattle.nickname is 'Кличка';
 comment on column lf_cattle.birth_date is 'Дата рождения';
 comment on column lf_cattle.leaving_date is 'Дата выбытия';
 comment on column lf_cattle.breed is 'Порода';
+comment on column lf_cattle.gender is 'Пол';
 comment on column lf_cattle.state is 'Состояние животного';
 comment on column lf_cattle.breed_purpose is 'Цель разведения';

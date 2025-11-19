@@ -29,7 +29,7 @@ public interface CattleApi {
             @PathVariable UUID uuid
     );
 
-    @Operation(summary = "Создание КРС")
+    @Operation(summary = "Добавление КРС")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Ок", content = {
                     @Content(
@@ -39,7 +39,7 @@ public interface CattleApi {
             })
     })
     @PostMapping()
-    ResponseEntity<UUID> create(@RequestBody CattleDto createRequest);
+    ResponseEntity<UUID> add(@RequestBody CattleDto createRequest);
 
     @Operation(summary = "Обновление КРС")
     @ApiResponses(value = {

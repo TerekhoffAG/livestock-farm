@@ -1,11 +1,15 @@
 package ru.farming.livestock_farm.dao;
 
 import jakarta.persistence.*;
+import lombok.Builder;
+import lombok.Getter;
 import org.hibernate.annotations.UuidGenerator;
 
 import java.time.LocalDate;
 import java.util.UUID;
 
+@Getter
+@Builder
 @Entity
 @Table(name = "lf_cattle")
 public abstract class CattleEntity {
@@ -33,8 +37,8 @@ public abstract class CattleEntity {
     /**
      * Имя животного (кличка)
      */
-    @Column(name = "nickname")
-    private String nickname;
+    @Column(name = "name")
+    private String name;
 
     /**
      * Дата рождения
@@ -55,28 +59,28 @@ public abstract class CattleEntity {
     private String breed;
 
     /**
-     * Пол
+     * Пол (мужской, женский)
      */
-    @Column(name = "sex")
+    @Column(name = "gender")
     @Enumerated(EnumType.STRING)
-    private Sex sex;
+    private Gender gender;
 
     /**
-     * Состояние животного
+     * Состояние животного (здоровый, больной, проданный, мертвый)
      */
     @Column(name = "state")
     @Enumerated(EnumType.STRING)
     private State state;
 
     /**
-     * Цель разведения
+     * Цель разведения (разведение, мясо, генетика, молоко)
      */
     @Column(name = "breed_purpose")
     @Enumerated(EnumType.STRING)
     private Purpose breedPurpose;
 
-    public enum Sex {
-        BULL, COW
+    public enum Gender {
+        MALE, FEMALE
     }
 
     public enum State {
